@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    overflow-x: hidden; 
+    opacity: 0; 
+    transition: opacity 1.5s ease-in-out;
+}
+
+body.page-loaded {
+    opacity: 1; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: transform 0.5s ease;
+}
+
+.navbar:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    color: red;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+main, .help-section, .social-media {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 2rem;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+    transform: translateY(30px);
+    opacity: 0; 
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+body.page-loaded main,
+body.page-loaded .help-section,
+body.page-loaded .social-media {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+h2, h3, h4 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.help-section p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+form, .contact-info, .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+label {
+    font-size: 1.8rem;
+    color: white;
+    align-self: flex-start;
+}
+
+input, textarea {
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px red; 
+}
+
+button {
+    padding: 1.2rem;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98); 
+}
+
+.help-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.help-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 45%;
+    min-width: 250px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+body.page-loaded .help-box {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.help-box h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.help-box p {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.social-icons a {
+    margin: 0.5rem;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); 
+    filter: none;
+}
+
+
+body.page-loaded .social-icons img {
+    animation: socialIconAnimation 1s ease-in-out forwards;
+}
+
+@keyframes socialIconAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

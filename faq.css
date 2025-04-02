@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 6rem 3rem;
+    color: white;
+    letter-spacing: 0.08rem;
+    line-height: 1.8;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.navbar nav ul li a {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar nav ul li a:hover {
+    color: #e50914;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 4rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    margin-top: 4rem;
+}
+
+header h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: #e50914;
+    letter-spacing: 0.15rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+
+header h3 {
+    font-size: 2.5rem;
+    color: #f1f1f1;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+section h2 {
+    font-size: 3.5rem;
+    color: #e50914;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+}
+
+section p, section ul {
+    font-size: 1.8rem;
+    line-height: 2.2;
+    color: #d3d3d3;
+    margin-left: 3rem;
+}
+
+section ul li {
+    margin-bottom: 2rem;
+}
+
+section a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+}
+
+section a:hover {
+    color: #ff6767;
+}
+
+.footer {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: #141414;
+    color: #757575;
+    letter-spacing: 0.05rem;
+}
+
+.footer p {
+    font-size: 2rem;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
