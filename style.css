@@ -251,3 +251,70 @@ body {
     margin: 10px;
     border-radius: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+/* Navbar Fix */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-options {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .signin-button {
+        font-size: 1.4rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    /* Fixing Email Input & Button */
+    .email-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .email-input,
+    .get-started {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* Trending Movies Section */
+    .movies {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.5rem;
+    }
+
+    .movies img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Footer Fix */
+    .footer {
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
